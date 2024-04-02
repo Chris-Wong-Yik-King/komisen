@@ -1,9 +1,15 @@
+# Atur cara mengira komisen
+
+#Isytihar pemboleh ubah
 jumlah = 0
 jualan = 0
 komisen = 0
 ulang ="Y"
+
 while ulang =="Y":
+    # Input
     jualan = float (input("Massukan jumlah jualan: RM"))
+    # Proses
     if jualan >80:
         kadar_komisen =0.055
     elif jualan >70:
@@ -14,9 +20,14 @@ while ulang =="Y":
         kadar_komisen =0.03
     else:
         kadar_komisen = 0.02
+    komisen = jualan * kadar_komisen
+    # Output
     komien =jualan*kadar_komisen
     print("Komisen anda ialah RM",round(komisen,2))
+    # Proses
     jumlah=jumlah +komisen
+    # Input
     ulang = input("Masukkan Y untuk terusksn pemgiraan atau N untuk hentikan pengiraan")
+# Output
 print("\n\tJumlah komisen ialah RM",round(jumlah,2))
 print("\t...Anda telah selesai membuat pengiraan...")
